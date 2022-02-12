@@ -1,0 +1,12 @@
+.demo-button{
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2em;
+  cursor: pointer;
+};
+
+.card{
+    background-color: yellow;
+    height: 50px;
+}
