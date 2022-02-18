@@ -15,13 +15,15 @@ timeline.appendChild(card);
     card.innerHTML=cardMarkup;
     card.classList.add("timeline-item");
     timeline.appendChild(card);
+
+    const button = document.createElement("button");
+    const text = document.createTextNode("Tell me more!");
+    button.appendChild(text);
+    button.classList.add("timeline-item-more-info");
+    card.appendChild(button);
 }));
 
-const button = document.createElement("button");
-const text = document.createTextNode("Show more");
-button.appendChild(text);
-button.classList.add("timeline-item-more-info");
-timeline.appendChild(button);
+
 
 
  
