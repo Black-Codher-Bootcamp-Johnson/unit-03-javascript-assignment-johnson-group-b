@@ -19,9 +19,15 @@ card.classList.add("timeline-item");
     button.appendChild(text);
     button.classList.add("timeline-item-more-info");
     card.appendChild(button);
+
+    button.addEventListener("click", onClickButton);
+
+    function onClickButton() {
+        createDialog(date);
+    };      
 }));
-        button.onclick = displayPopulation;
-        document.body.appendChild(button);
+
+
     function createDialog(data) {
         const container = document.createElement('div');
         container.classList.add('modal-container');
@@ -30,16 +36,13 @@ card.classList.add("timeline-item");
         container.appendChild(title);
         
         const description = document.createElement('p');
-        description.textContent = data.description
+        description.textContent = data.fullDescription
         container.appendChild(description);
         
         const closeDialog = document.createElement('button');
         closeDialog.textContent = 'close'
         container.appendChild(closeDialog);
     
-        return container
-
-        button.appendChild(createDialog);
+        document.querySelector(".dialog").innerHTML=container.outerHTML
         
-     };
-     
+ };
