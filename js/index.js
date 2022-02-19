@@ -4,7 +4,7 @@ const timeline = document.querySelector(".timeline");
 const card = document.createElement("div");
 card.classList.add("timeline-item");
 
-timeline.appendChild(card);
+
 
  dates.map((date => {
     const card = document.createElement("div");
