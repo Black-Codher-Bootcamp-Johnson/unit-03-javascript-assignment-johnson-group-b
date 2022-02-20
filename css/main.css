@@ -31,9 +31,8 @@ body{
   background: #fff;
 }
 
-
 .modal-container {
-background-color: #cca4ac; /* this will be purple */
+background-color: #cca4ac; 
 position: absolute;
 height: 280px;
 width: 340px;
@@ -63,7 +62,6 @@ align-items: center;
   line-height: normal;
   padding: 10px 20px 30px 40px;
 }
-
 
 .dialog { 
   background-color: white; /* this dialog will have a white background */
