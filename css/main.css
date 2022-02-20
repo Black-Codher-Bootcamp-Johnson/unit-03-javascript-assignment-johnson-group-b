@@ -1,11 +1,11 @@
 body{
-  background-color: #cca4ac; /* main styling */
+  background-color: #cca4ac;
   font: normal 16px/1.5;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .timeline-item-more-info { 
-  background-color: #c37960; /* more information */
+  background-color: #c37960; 
   border: 1px solid black;
   border-radius: 10px;
   padding: 1em;
@@ -14,7 +14,7 @@ body{
 }
 
 .timeline-item {
-  background-color: bisque; /* this is the item */
+  background-color: bisque; 
   border: 1px solid black;
   border-radius: 10px;
   padding: 15px;
@@ -22,14 +22,9 @@ body{
   text-align: center;
 }
 
-.timeline ul li {
-  list-style-type: none; /* this is an unordered list of the timeline */
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-  background: #fff;
-}
+/*{
+    outline: 1px solid red;
+}*/
 
 .modal-container {
 background-color: #cca4ac; 
@@ -42,8 +37,8 @@ justify-content: center;
 align-items: center;
 }
 
-.h1 {
-  color: black; /* this is the title */
+.dialog h1 {
+  color: black; 
   margin: 5px;
   font-weight: bold;
   font-size: 24px;
@@ -53,8 +48,8 @@ align-items: center;
   margin: auto;
 }
 
-.p {
-  color: black; /* this is the full description */
+.dialog p {
+  color: black; 
   font-size: 18px;
   text-align: center;
   margin: auto;
@@ -64,10 +59,15 @@ align-items: center;
 }
 
 .dialog { 
-  background-color: white; /* this dialog will have a white background */
+  background-color: white; 
   position: absolute;
   top: 0%;
   bottom: 0;
   right: 0;
   left: 0;
+ /*display: none;*/
+}
+
+.dialog.visible {
+  display: block;
 }
