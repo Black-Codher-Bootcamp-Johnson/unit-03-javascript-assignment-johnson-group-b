@@ -4,6 +4,10 @@ const timeline = document.querySelector(".timeline");
 const card = document.createElement("div");
 card.classList.add("timeline-item");
 
+const dialog = document.createElement("div");
+dialog.classList.add("dialog");
+document.body.appendChild(dialog);
+
  dates.map((date => {
     const card = document.createElement("div");
     const cardMarkup=`
@@ -27,22 +31,36 @@ card.classList.add("timeline-item");
     };      
 }));
 
-
     function createDialog(data) {
         const container = document.createElement('div');
         container.classList.add('modal-container');
+
         const title = document.createElement('h1');
-        title.textcontent = data.title
+        title.textContent = data.title
         container.appendChild(title);
-        
+       
         const description = document.createElement('p');
         description.textContent = data.fullDescription
         container.appendChild(description);
+
+        const image = document.createElement('img');
+        image.src = data.image
+        container.appendChild(image);
         
         const closeDialog = document.createElement('button');
         closeDialog.textContent = 'close'
         container.appendChild(closeDialog);
+
+        closeDialog.addEventListener("click", offClickButton);
     
-        document.querySelector(".dialog").innerHTML=container.outerHTML
-        
+        const dialog = document.querySelector(".dialog");
+        dialog.innerHTML="";
+        dialog.appendChild(container);
+
+        //TODO: add the visible class to the dialog
+
  };
+
+ function offClickButton() {
+    //TODO: remove visible class from dialog
+ }
