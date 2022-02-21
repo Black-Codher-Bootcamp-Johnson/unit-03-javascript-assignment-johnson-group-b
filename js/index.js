@@ -65,4 +65,8 @@ document.body.appendChild(dialog);
 
  function offClickButton() {
     //TODO: remove visible class from dialog
+    const dialog = document.querySelector(".dialog");
+    dialog.classList.add('hide');
+    
+    
  }
