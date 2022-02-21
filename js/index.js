@@ -49,7 +49,9 @@ document.body.appendChild(dialog);
         
         const closeDialog = document.createElement('button');
         closeDialog.textContent = 'close'
+        closeDialog.classList.add('modal-close-button');
         container.appendChild(closeDialog);
+
 
         closeDialog.addEventListener("click", offClickButton);
     
@@ -63,4 +65,8 @@ document.body.appendChild(dialog);
 
  function offClickButton() {
     //TODO: remove visible class from dialog
+    const dialog = document.querySelector(".dialog");
+    dialog.classList.add('hide');
+    
+    
  }
