@@ -78,7 +78,7 @@ padding-bottom: 10px;
   line-height: normal;
 }
 
-.dialog { 
+.dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -95,3 +95,18 @@ img {
   object-fit: contain;
  }
  
+  background-color: white; 
+  position: absolute;
+  top: 0%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+ display: block;
+}
+
+
+
+.dialog.hide{
+  display:none;
+}
+
