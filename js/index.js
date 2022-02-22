@@ -10,7 +10,7 @@ const cardMarkup=`
 the delicious food that has been in our family for generations, made with love for our customers!</p>`;
 intro.innerHTML=cardMarkup;
 intro.classList.add("intro");
-document.body.appendChild(intro);
+document.body.prepend(intro);
 
 const dialog = document.createElement("div");
 dialog.classList.add("dialog");
@@ -63,20 +63,18 @@ document.body.appendChild(dialog);
 
 
         closeDialog.addEventListener("click", offClickButton);
+        
     
         const dialog = document.querySelector(".dialog");
+        dialog.classList.remove('hide');
         dialog.innerHTML="";
         dialog.appendChild(container);
+        
  };
+
 
  function offClickButton() {
     const dialog = document.querySelector(".dialog");
     dialog.classList.add('hide');
  };
 
-    //TODO: remove visible class from dialog
-    const dialog = document.querySelector(".dialog");
-    dialog.classList.add('hide');
-    
-    
- }
