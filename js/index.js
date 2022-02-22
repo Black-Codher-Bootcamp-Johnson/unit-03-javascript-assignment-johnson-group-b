@@ -2,7 +2,15 @@ import { dates } from "./data.js";
  
 const timeline = document.querySelector(".timeline");
 const card = document.createElement("div");
-card.classList.add("timeline-item");
+
+const intro = document.createElement("div");
+const cardMarkup=`
+<h3>Mayme's Bakery</h3>
+<p>Find out the history of each ingredient that when combined with our family recipes and talented staff, becomes
+the delicious food that has been in our family for generations, made with love for our customers!</p>`;
+intro.innerHTML=cardMarkup;
+intro.classList.add("intro");
+document.body.appendChild(intro);
 
 const dialog = document.createElement("div");
 dialog.classList.add("dialog");
@@ -48,7 +56,8 @@ document.body.appendChild(dialog);
         container.appendChild(image);
         
         const closeDialog = document.createElement('button');
-        closeDialog.textContent = 'close'
+        closeDialog.textContent = 'Back to the main page'
+        closeDialog.classList.add('modal-close-button');
         container.appendChild(closeDialog);
 
         closeDialog.addEventListener("click", offClickButton);
@@ -56,11 +65,11 @@ document.body.appendChild(dialog);
         const dialog = document.querySelector(".dialog");
         dialog.innerHTML="";
         dialog.appendChild(container);
-
-        //TODO: add the visible class to the dialog
-
  };
 
  function offClickButton() {
-    //TODO: remove visible class from dialog
- }
+    const dialog = document.querySelector(".dialog");
+    dialog.classList.add('hide');
+ };
+
+ 
