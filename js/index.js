@@ -57,8 +57,10 @@ document.body.appendChild(dialog);
         
         const closeDialog = document.createElement('button');
         closeDialog.textContent = 'Back to the main page'
+        closeDialog.textContent = 'close'
         closeDialog.classList.add('modal-close-button');
         container.appendChild(closeDialog);
+
 
         closeDialog.addEventListener("click", offClickButton);
          
