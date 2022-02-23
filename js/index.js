@@ -61,8 +61,9 @@ document.body.appendChild(dialog);
         container.appendChild(closeDialog);
 
         closeDialog.addEventListener("click", offClickButton);
-    
+         
         const dialog = document.querySelector(".dialog");
+        dialog.classList.remove('hide');
         dialog.innerHTML="";
         dialog.appendChild(container);
  };
@@ -71,5 +72,9 @@ document.body.appendChild(dialog);
     const dialog = document.querySelector(".dialog");
     dialog.classList.add('hide');
  };
-
  
+ button.addEventListener("click", onClickButton);
+
+    function onClickButton() {
+        createDialog(date);
+    };    
