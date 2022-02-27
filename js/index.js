@@ -19,9 +19,9 @@ document.body.appendChild(dialog);
  dates.map((date => {
     const card = document.createElement("div");
     const cardMarkup=`
-    <h2>${date.title}</h2>
-    <p>${date.date}</p>
-    <p>${date.summary}</p>`;
+    <h2 class=timeline-item-title>${date.title}</h2>
+    <span class=timeline-item-date>${date.date}</span>
+    <p class=timeline-item-summary>${date.summary}</p>`;
     card.innerHTML=cardMarkup;
     card.classList.add("timeline-item");
     timeline.appendChild(card);
