@@ -47,6 +47,18 @@ h3{
   text-align: center;
 }
 
+.timeline-item-title {
+  color: black;
+}
+
+.timeline-item-date {
+  color: black;
+}
+
+.timeline-item-summary {
+  color: black;
+}
+
 #modal-container {
 background: #f9f5c7;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
