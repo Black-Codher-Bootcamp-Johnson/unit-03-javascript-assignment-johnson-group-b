@@ -19,7 +19,7 @@ document.body.appendChild(dialog);
  dates.map((date => {
     const card = document.createElement("div");
     const cardMarkup=`
-    <h3>${date.title}</h3>
+    <h2>${date.title}</h2>
     <p>${date.date}</p>
     <p>${date.summary}</p>`;
     card.innerHTML=cardMarkup;
@@ -79,14 +79,8 @@ document.body.appendChild(dialog);
         
  };
 
-
  function offClickButton() {
     const dialog = document.querySelector(".dialog");
     dialog.classList.add('hide');
  };
  
- button.addEventListener("click", onClickButton);
-
-    function onClickButton() {
-        createDialog(date);
-    };    
